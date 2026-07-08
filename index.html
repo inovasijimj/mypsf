@@ -25,12 +25,13 @@ Jabatan Imigresen Malaysia
     <div class="search-box">
 
     <input
-        type="text"
-        id="search"
-        placeholder="Masukkan No Resit atau No Kad Pengenalan"
-        oninput="this.value=this.value.toUpperCase()"
-        onkeypress="if(event.key==='Enter'){cariPassport();}">
-
+    type="text"
+    id="search"
+    placeholder="📷 Scan Barcode atau Masukkan No Resit / No Kad Pengenalan"
+    autocomplete="off"
+    autofocus
+    oninput="this.value=this.value.toUpperCase()"
+    
     <button onclick="cariPassport()">
         Cari Passport
     </button>
