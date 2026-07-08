@@ -81,15 +81,31 @@ async function telahDiserah() {
 
     if (data.success) {
 
-        alert("✅ Status berjaya dikemaskini.");
+    document.getElementById("statusMsg").innerHTML = `
+    <div style="
+        background:#d4edda;
+        color:#155724;
+        padding:15px;
+        border-radius:10px;
+        font-weight:bold;">
+        ✅ Status berjaya dikemaskini.
+    </div>`;
 
-        cariPassport();   // refresh paparan
+    setTimeout(function () {
 
-    } else {
+        document.getElementById("search").value = "";
+        document.getElementById("result").innerHTML =
+        "Sila scan barcode atau masukkan No Resit.";
 
-        alert("❌ Gagal mengemaskini.");
+        document.getElementById("search").focus();
 
-    }
+    }, 3000);
+
+} else {
+
+    alert("❌ Gagal mengemaskini.");
+
+}
 
 }
 
@@ -118,16 +134,75 @@ async function tidakDiserah() {
 
     const data = await response.json();
 
-    if (data.success) {
+    document.getElementById("statusMsg").innerHTML = `
+<div style="
+    background:#f8d7da;
+    color:#721c24;
+    padding:15px;
+    border-radius:10px;
+    font-weight:bold;">
+    ❌ Status dikemaskini.
+</div>`;
 
-        alert("✅ Status berjaya dikemaskini.");
+setTimeout(function () {
+
+    document.getElementById("search").value = "";
+    document.getElementById("result").innerHTML =
+    "Sila scan barcode atau masukkan No Resit.";
+
+    document.getElementById("search").focus();
+
+}, 3000);
+
+}
+// =============================
+// Dual Input Method
+// Barcode Scanner + Manual Entry
+// =============================
+
+// Fokus automatik pada kotak carian
+window.onload = function () {
+    document.getElementById("search").focus();
+};
+
+// Selepas scan atau tekan Enter
+document.getElementById("search").addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+
+        e.preventDefault();
 
         cariPassport();
 
-    } else {
-
-        alert("❌ Gagal mengemaskini.");
-
     }
 
-}
+});
+
+// ===============================
+// Dual Input Method
+// Barcode Scanner + Manual Entry
+// ===============================
+
+window.onload = function () {
+
+    const input = document.getElementById("search");
+
+    input.focus();
+
+    let timer;
+
+    input.addEventListener("input", function () {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(function () {
+
+            if (input.value.trim() !== "") {
+                cariPassport();
+            }
+
+        }, 250);
+
+    });
+
+};
