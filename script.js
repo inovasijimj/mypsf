@@ -31,11 +31,11 @@ async function cariPassport() {
                     <p><b>Tarikh Diserah :</b> ${data.tarikh || "-"}</p>
 
                    <p><b>Catatan :</b> ${
-                        data.catatan === "1" ? "PMA lama rosak" :
-                        data.catatan === "2" ? "Dokumen tidak lengkap" :
-                        data.catatan === "3" ? "Pemohon tidak hadir" :
-                        data.catatan === "4" ? "Lain-lain" :
-                        "-"
+                        String(data.catatan).trim() === "1" ? "PMA lama rosak" :
+                        String(data.catatan).trim() === "2" ? "Dokumen tidak lengkap" :
+                        String(data.catatan).trim() === "3" ? "Pemohon tidak hadir" :
+                        String(data.catatan).trim() === "4" ? "Lain-lain" :
+                        data.catatan || "-"
                     }</p>
 
                     <br>
