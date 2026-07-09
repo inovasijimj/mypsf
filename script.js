@@ -30,7 +30,7 @@ async function cariPassport() {
 
                     <p><b>Tarikh Diserah :</b> ${data.tarikh || "-"}</p>
 
-                   <p><b>Sebab Tidak Dapat Diserah :</b> ${
+                   <p><b>Catatan :</b> ${
                         data.catatan === "1" ? "PMA lama rosak" :
                         data.catatan === "2" ? "Dokumen tidak lengkap" :
                         data.catatan === "3" ? "Pemohon tidak hadir" :
