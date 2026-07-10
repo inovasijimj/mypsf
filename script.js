@@ -142,14 +142,17 @@ async function tidakDiserah() {
     const data = await response.json();
 
     document.getElementById("statusMsg").innerHTML = `
-<div style="
-    background:#f8d7da;
-    color:#721c24;
-    padding:15px;
-    border-radius:10px;
-    font-weight:bold;">
-    ❌ Status dikemaskini.
-</div>`;
+    <div style="
+        background:#d4edda;
+        color:#155724;
+        padding:15px;
+        border-radius:10px;
+        margin-top:15px;
+        font-weight:bold;
+    ">
+        ✅ Status berjaya dikemaskini.
+    </div>
+`;
 
 setTimeout(function () {
 
