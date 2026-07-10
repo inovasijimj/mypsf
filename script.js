@@ -129,14 +129,38 @@ async function tidakDiserah() {
 
     if (!sebab) return;
 
-    const keyword = document.getElementById("search").value.trim();
+// Tukar nombor pilihan kepada catatan sebenar
+const pilihanSebab = {
+    "1": "PMA lama rosak",
+    "2": "Dokumen tidak lengkap",
+    "3": "Pemohon tidak hadir",
+    "4": "Lain-lain"
+};
+
+let catatan = pilihanSebab[sebab.trim()];
+
+if (!catatan) {
+    alert("Sila masukkan nombor 1, 2, 3 atau 4 sahaja.");
+    return;
+}
+
+// Jika pilih 4, minta pengguna masukkan sebab lain
+if (sebab.trim() === "4") {
+    const sebabLain = prompt("Sila nyatakan sebab lain:");
+
+    if (!sebabLain || !sebabLain.trim()) return;
+
+    catatan = sebabLain.trim();
+}
+
+const keyword = document.getElementById("search").value.trim();
 
     const response = await fetch(
         API_URL +
         "?action=update" +
         "&search=" + encodeURIComponent(keyword) +
         "&status=" + encodeURIComponent("TIDAK DAPAT DISERAH") +
-        "&catatan=" + encodeURIComponent(sebab)
+        "&catatan=" + encodeURIComponent(catatan)
     );
 
     const data = await response.json();
