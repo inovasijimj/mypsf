@@ -119,12 +119,13 @@ async function tidakDiserah() {
 
     const sebab = prompt(
 `Sebab tidak dapat diserah
+(Sila masukkan nombor sebagai pilihan)
 
 1. PMA lama rosak
 2. Dokumen tidak lengkap
 3. Pemohon tidak hadir
 4. Lain-lain`
-    );
+);
 
     if (!sebab) return;
 
