@@ -28,7 +28,11 @@ async function cariPassport() {
 
                     <p><b>Status :</b> ${data.status}</p>
 
-                    <p><b>Tarikh Diserah :</b> ${data.tarikh || "-"}</p>
+                    <p><b>Tarikh Diserah :</b> ${
+                    data.tarikh
+                    ? new Date(data.tarikh).toLocaleDateString("ms-MY")
+                    : "-"
+                    }</p>
 
                    <p><b>Catatan :</b> ${
                         String(data.catatan).trim() === "1" ? "PMA lama rosak" :
