@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MyPassport Smart Finder</title>
+    <title>MyPassport Smart Finder (MyPSF)</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,41 +14,38 @@
 
 <div class="container">
 
-<img src="Logo JIM.png" class="logo">
+    <img src="Logo JIM.png" class="logo" alt="Logo JIM">
 
-<h1>MyPassport Smart Finder (MyPSF)</h1>
+    <h1>MyPassport Smart Finder (MyPSF)</h1>
 
-<p class="subtitle">
-Jabatan Imigresen Malaysia
-</p>
+    <p class="subtitle">
+        Jabatan Imigresen Malaysia
+    </p>
 
     <div class="search-title">
+        No. Resit / No. Kad Pengenalan
+    </div>
 
-No. Rujukan / No. Tag
+    <div class="search-box">
 
-</div>
+        <input
+            type="text"
+            id="search"
+            placeholder="Masukkan No. Resit atau No. Kad Pengenalan"
+            autocomplete="off"
+            autofocus
+            oninput="this.value=this.value.toUpperCase()"
+            onkeypress="if(event.key==='Enter') cariPassport();">
 
-<div class="search-box">
+        <button onclick="cariPassport()">
+            🔍
+        </button>
 
-<input
-type="text"
-id="search"
-placeholder="Masukkan No. MyKad atau No. Tag"
-autocomplete="off"
-autofocus
-oninput="this.value=this.value.toUpperCase()">
-
-<button onclick="cariPassport()">
-
-🔍
-
-</button>
-
-</div>
+    </div>
 
     <div id="result" class="result">
 
-        Sila masukkan No Resit atau No Kad Pengenalan.
+        Sila masukkan No. Resit atau No. Kad Pengenalan.
 
     </div>
 
@@ -57,5 +54,4 @@ oninput="this.value=this.value.toUpperCase()">
 <script src="script.js?v=5"></script>
 
 </body>
-
 </html>
