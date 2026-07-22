@@ -24,23 +24,109 @@ async function cariPassport() {
 
                     <h2>Maklumat Passport</h2>
 
-                    <p><b>No Tag :</b> ${data.tag}</p>
+                    <div class="info-row">
 
-                    <p><b>Status :</b> ${data.status}</p>
+                        <div class="icon">
+                        
+                        🏷️
+                        
+                        </div>
+                        
+                        <div>
+                        
+                        <div class="label">
+                        
+                        No. Tag
+                        
+                        </div>
+                        
+                        <div class="value">
+                        
+                        ${data.tag}
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        </div>
 
-                    <p><b>Tarikh Diserah :</b> ${
-                    data.tarikh
-                    ? new Date(data.tarikh).toLocaleDateString("ms-MY")
-                    : "-"
-                    }</p>
+                    <div class="info-row">
 
-                   <p><b>Catatan :</b> ${
-                        String(data.catatan).trim() === "1" ? "PMA lama rosak" :
-                        String(data.catatan).trim() === "2" ? "Dokumen tidak lengkap" :
-                        String(data.catatan).trim() === "3" ? "Pemohon tidak hadir" :
-                        String(data.catatan).trim() === "4" ? "Lain-lain" :
-                        data.catatan || "-"
-                    }</p>
+                        <div class="icon">
+                        
+                        🛡️
+                        
+                        </div>
+                        
+                        <div>
+                        
+                        <div class="label">
+                        
+                        Status
+                        
+                        </div>
+                        
+                        <div class="value status">
+                        
+                        ${data.status}
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        </div>
+
+                    <div class="info-row">
+
+                        <div class="icon">
+                        
+                        📅
+                        
+                        </div>
+                        
+                        <div>
+                        
+                        <div class="label">
+                        
+                        Tarikh Diserah
+                        
+                        </div>
+                        
+                        <div class="value">
+                        
+                        ...
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        </div>
+
+                   <div class="info-row">
+
+                        <div class="icon">
+                        
+                        💬
+                        
+                        </div>
+                        
+                        <div>
+                        
+                        <div class="label">
+                        
+                        Catatan
+                        
+                        </div>
+                        
+                        <div class="value">
+                        
+                        ${data.catatan}
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        </div>
 
                     <div id="statusMsg" style="margin-top:20px;"></div>
 
