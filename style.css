@@ -32,26 +32,21 @@ body{
 
 .logo{
 
-    width:95px;
+    width:120px;
 
     display:block;
 
-    margin:auto;
-
-    margin-bottom:18px;
+    margin:0 auto 15px;
 
 }
 
 h1{
-
-    color:#0b2d6b;
-
     text-align:center;
-
-    font-size:48px;
-
-    margin-bottom:8px;
-
+    color:#0b2d6b;
+    font-size:52px;
+    font-weight:700;
+    margin:5px 0 8px;
+    line-height:1.15;
 }
 
 .subtitle{
@@ -60,9 +55,9 @@ h1{
 
     color:#666;
 
-    font-size:22px;
+    font-size:24px;
 
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
