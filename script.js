@@ -54,7 +54,7 @@ async function cariPassport() {
 
                         <div class="icon">
                         
-                        🛡️
+                        <span class="material-icons">verified</span>
                         
                         </div>
                         
@@ -80,7 +80,7 @@ async function cariPassport() {
 
                         <div class="icon">
                         
-                        📅
+                        <span class="material-icons">event</span>
                         
                         </div>
                         
@@ -108,7 +108,7 @@ ${data.tarikh
 
                         <div class="icon">
                         
-                        💬
+                        <span class="material-icons">chat</span>
                         
                         </div>
                         
