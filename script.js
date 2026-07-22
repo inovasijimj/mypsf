@@ -93,10 +93,12 @@ async function cariPassport() {
                         </div>
                         
                         <div class="value">
-                        
-                        ...
-                        
-                        </div>
+
+${data.tarikh
+    ? new Date(data.tarikh).toLocaleDateString("ms-MY")
+    : "-"}
+
+</div>
                         
                         </div>
                         
