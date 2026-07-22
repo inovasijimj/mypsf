@@ -28,7 +28,7 @@ async function cariPassport() {
 
                         <div class="icon">
                         
-                        🏷️
+                        <span class="material-icons">sell</span>
                         
                         </div>
                         
