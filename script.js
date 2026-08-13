@@ -6,7 +6,7 @@ async function cariPassport() {
     const result = document.getElementById("result");
 
     if (keyword === "") {
-        result.innerHTML = "<span style='color:red'>Sila masukkan No Resit atau No Kad Pengenalan.</span>";
+        result.innerHTML = "<span style='color:red'>Sila masukkan No Borang Permohonan atau No Kad Pengenalan.</span>";
         return;
     }
 
@@ -183,7 +183,7 @@ async function telahDiserah() {
 
         document.getElementById("search").value = "";
         document.getElementById("result").innerHTML =
-        "Sila scan barcode atau masukkan No Resit.";
+        "Sila scan barcode atau masukkan No Borang Permohonan.";
 
         document.getElementById("search").focus();
 
@@ -264,7 +264,7 @@ setTimeout(function () {
 
     document.getElementById("search").value = "";
     document.getElementById("result").innerHTML =
-    "Sila scan barcode atau masukkan No Resit.";
+    "Sila scan barcode atau masukkan No Borang Permohonan.";
 
     document.getElementById("search").focus();
 
